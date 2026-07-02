@@ -1,8 +1,8 @@
 # SpineTwin
 
-Achieves 2D/3D consistent keypoint detection. Our architecture is as follows:
+This is the official PyTorch implementation of our paper: Geometrically Consistent 2D/3D Vertebral Landmark Localization: *A Unified Digital Twin Framework with Cross-Cohort Zero-Shot Evaluation*. Our architecture is as follows:
 
-![Architecture Diagram](insert_your_image_path_here)
+![Architecture Diagram](imgs/pipline.png)
 
 ## 🚀 Environment Requirements
 
@@ -57,6 +57,10 @@ bash train_spine1k.sh
 Train (RL)
 ```
 bash train_spine1k_rl.sh
+```
+## 🎯 Infer
+```
+bash infer.sh
 ```
 ## 👏 Acknowledgements
 Our codebase is built upon [MedCoSS](https://github.com/yeerwen/MedCoSS).
