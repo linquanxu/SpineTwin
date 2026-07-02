@@ -4,7 +4,7 @@ This is the official PyTorch implementation of our paper: Geometrically Consiste
 
 ![Architecture Diagram](imgs/pipline.jpg)
 
-## 🚀 Environment Requirements
+## ⚙️ Environment Requirements
 
 The following environment has been tested and is supported:
 
