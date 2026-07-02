@@ -1,6 +1,23 @@
 # SpineTwin
 
+Achieves 2D/3D consistent keypoint detection. Our architecture is as follows:
+
+![Architecture Diagram](insert_your_image_path_here)
+
+## 🚀 Environment Requirements
+
+The following environment has been tested and is supported:
+
+- `python` == 3.8
+- `pytorch` == 2.1.1
+- `cuda` == 11.8
+- `cudnn` == 8.7.0
+
+## 📁 Data Preparation
+
 To train the model on your own data, please organize your dataset as follows:
+
+```text
 data/
 └── spine1k/
     ├── ct/
@@ -31,3 +48,15 @@ data/
     ├── train_3d.txt
     ├── val_2d.txt
     └── val_3d.txt
+```
+## 🚀 Training
+Train (fusion)
+```
+bash train_spine1k.sh
+```
+Train (RL)
+```
+bash train_spine1k_rl.sh
+```
+## 👏 Acknowledgements
+Our codebase is built upon [MedCoSS](https://github.com/yeerwen/MedCoSS).
