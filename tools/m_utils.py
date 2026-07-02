@@ -264,7 +264,7 @@ def set_monai_determinism(seed: int = 42):
     set_determinism(seed=seed)
 
 def validate(args, input_size, model, ValLoader, num_classes, engine, input_size_2d=None, writer=None, epoch=None):
-    fold = 'fold2'
+    fold = 'fold0'
     mode_s = 'fusion'
     fname_ap = f'results/{mode_s}/{fold}/ap_error.txt'
     fname_lat = f'results/{mode_s}/{fold}/lat_error.txt'

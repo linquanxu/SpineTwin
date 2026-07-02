@@ -413,7 +413,7 @@ def save_image_sitk(tensor, save_path, spacing=(1.0, 1.0, 1.0), origin=(0, 0, 0)
     sitk.WriteImage(sitk_image, save_path)
 
 def validate(args, input_size, model, ValLoader, num_classes, engine, input_size_2d=None, writer=None, epoch=None):
-    fold = 'fold2'
+    fold = 'fold0'
     mode_s = 'rl'
     fname_ap = f'results/{mode_s}/{fold}/ap_error.txt'
     fname_lat = f'results/{mode_s}/{fold}/lat_error.txt'
@@ -756,7 +756,7 @@ def draw_points_2d(image_tensor, pts_gt, pts_pred, save_path, flip_ud=True, proj
 def validate_vision(args, input_size, model, ValLoader, num_classes, engine, input_size_2d=None, writer=None, epoch=None):
     fold = 'fold2'
     mode_s = 'rl'
-    base_dir = f'/data/xulinquan/medcoss/checkpoints/spine_1015_n/{mode_s}/{fold}'
+    base_dir = f'results/{mode_s}/{fold}'
     
     fname_ap = f'{base_dir}/ap_error.txt'
     fname_lat = f'{base_dir}/lat_error.txt'
