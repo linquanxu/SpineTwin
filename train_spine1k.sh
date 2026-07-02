@@ -4,10 +4,10 @@ CUDA_VISIBLE_DEVICES=1 nohup python -u train_spine1k.py \
                 --input_size 64,160,160 \
                 --model_name model \
                 --ratio_labels_2d 1 \
-                --train_dir_2d /data/xulinquan/medcoss/data/spine_1015_n\
-                --train_list_2d /data/xulinquan/medcoss/data/spine_1015_n/fold4_val_2d.txt \
-                --train_dir_3d /data/xulinquan/medcoss/data/spine_1015_n/ct \
-                --train_list_3d /data/xulinquan/medcoss/data/spine_1015_n/fold4_val_3d.txt \
+                --train_dir_2d data/spine1k\
+                --train_list_2d data/spine1k/train_2d.txt \
+                --train_dir_3d data/spine1k/ct \
+                --train_list_3d data/spine1k/train_3d.txt \
                 --num_epochs 100 \
                 --start_epoch 0 \
                 --num_gpus 1 \
@@ -19,12 +19,12 @@ CUDA_VISIBLE_DEVICES=1 nohup python -u train_spine1k.py \
                 --reload_from_pretrained False \
                 --FP16 False \
                 --pretrained_path checkpoint-299.pth \
-                --test_dir_2d /data/xulinquan/medcoss/data/spine_1015_n \
-                --test_list_2d /data/xulinquan/medcoss/data/spine_1015_n/fold4_val_2d.txt \
-                --test_dir_3d /data/xulinquan/medcoss/data/spine_1015_n/ct \
-                --test_list_3d /data/xulinquan/medcoss/data/spine_1015_n/fold4_val_3d.txt \
+                --test_dir_2d data/spine1k \
+                --test_list_2d data/spine1k/val_2d.txt \
+                --test_dir_3d data/spine1k/ct \
+                --test_list_3d data/spine1k/val_3d.txt \
                 --batch_size 2 \
                 --grad_accum_steps 8 \
                 --mode fusion \
-                --snapshot_dir results/fusion/test \
-> results/fusion/test/log.txt 2>&1 &
+                --snapshot_dir results/fusion/fold0 \
+> results/fusion/fold0/log.txt 2>&1 &

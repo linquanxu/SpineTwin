@@ -167,7 +167,7 @@ def main():
             run_lr_finder(args, model, trainloader, optimizer, device, None, None, kl_criterion, start_lr=1e-7, end_lr=50, num_iter=1000)
             return
 
-        restart_path = 'results/test3/1_34.0960checkpoint_total.pth'
+        restart_path = 'results/fusion/fold0/checkpoint.pth'
 
         to_restore = {"epoch": 0}
         restart_from_checkpoint( 

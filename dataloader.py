@@ -92,7 +92,7 @@ class MOTS_Dataset_train_2d3d(data.Dataset):
         # 1. Load 2D Data Lists
         if self.mode in ['only_2d_ap', 'only_2d_lat', 'joint', 'fusion']:
             if root_2d and list_path_2d:
-                data_lines = open(os.path.join(root_2d, list_path_2d), "r").readlines()
+                data_lines = open(self.list_path_2d, "r").readlines()
                 for name in data_lines:
                     name = name.strip()
                     # Only add AP if needed
@@ -280,7 +280,7 @@ class MOTS_Dataset_test_2d3d(data.Dataset):
 
         # 1. Load 2D
         if self.mode in ['only_2d_ap', 'only_2d_lat', 'joint', 'fusion']:
-            data_lines = open(os.path.join(root_2d, list_path_2d), "r").readlines()
+            data_lines = open(self.list_path_2d, "r").readlines()
             for name in data_lines:
                 name = name.strip()
                 if self.mode in ['only_2d_ap', 'joint', 'fusion']:
