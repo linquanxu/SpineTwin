@@ -2,7 +2,7 @@
 
 This is the official PyTorch implementation of our paper: Geometrically Consistent 2D/3D Vertebral Landmark Localization: *A Unified Digital Twin Framework with Cross-Cohort Zero-Shot Evaluation*. Our architecture is as follows:
 
-![Architecture Diagram](imgs/pipline.png)
+![Architecture Diagram](imgs/pipline.jpg)
 
 ## 🚀 Environment Requirements
 
